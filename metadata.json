@@ -1,0 +1,8 @@
+{
+  "name": "CipherLab — AI-Powered Cryptography Workbench",
+  "description": "Professional interactive cryptography suite featuring Classical Ciphers, Web Crypto Modern Encryption (AES-GCM, RSA-OAEP, SHA), AI Cryptanalysis, Image Steganography, Password Analyzer, CTF Challenges, and Gemini AI Tutor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

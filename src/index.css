@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-mono: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-arabic: 'Cairo', 'Inter', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #080c10;
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+
+  [dir="rtl"] body {
+    font-family: var(--font-arabic);
+  }
+
+  .font-mono-cipher {
+    font-family: var(--font-mono);
+    letter-spacing: 0.05em;
+  }
+}
+
+/* Custom cyber scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d131a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* Cyber glows and animations */
+.cyber-glow-green {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.25), inset 0 0 10px rgba(16, 185, 129, 0.05);
+}
+
+.cyber-glow-cyan {
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.25), inset 0 0 10px rgba(6, 182, 212, 0.05);
+}
+
+.cyber-glow-emerald-strong {
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.45);
+}
+
+.cyber-border-glow {
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.15);
+}
+
+/* Scanline subtle CRT effect for hero and terminal boxes */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.02),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.02)
+  );
+  background-size: 100% 4px, 6px 100%;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
